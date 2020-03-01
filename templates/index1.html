@@ -1,0 +1,84 @@
+{% extends 'index.html' %}
+
+  {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+{% block content %}
+
+<div class="row">
+  <div class="column cloths">
+    <div class="content">
+      <img src="{% static 'cloths/mens/shirts/1.jfif' %}">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cloths">
+    <div class="content">
+<!--        {% load static %}-->
+        <img src="{% static 'cloths/mens/shirts/2.jfif' %}">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cloths">
+    <div class="content">
+    <img src="{% static 'cloths/mens/shirts/3.jfif' %}">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column watch">
+    <div class="content">
+      <img src="{% static 'watch/mens/1.jfif' %}">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column watch">
+    <div class="content">
+    <img src="{% static 'watch/mens/3.jfif' %}">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column watch">
+    <div class="content">
+    <img src="{% static 'watch/mens/3.jfif' %}">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column shoes">
+    <div class="content">
+      <img src="{% static 'shoes/mens/1.jfif' %}">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column shoes">
+    <div class="content">
+    <img src="{% static 'shoes/mens/2.jfif' %}">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column shoes">
+    <div class="content">
+    <img src="{% static 'shoes/mens/3.jfif' %}">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+
+{% endblock %}
+

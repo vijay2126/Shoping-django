@@ -1,0 +1,22 @@
+body{
+    margin: 0px;
+}
+
+.footers {
+    position: relative;
+    bottom: 0px;
+    width: 98%;
+    margin: 1%;
+    float: left;
+    background: black;
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+}
+.icon
+{
+    padding: 20px;
+}
+.icon i
+{
+margin: 0px;
+}

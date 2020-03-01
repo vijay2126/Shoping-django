@@ -1,0 +1,19 @@
+.container
+{
+margin: auto;
+background-color: #c9ffee;
+width: 300px;
+border-radius: 10px;
+text-align: center;
+
+}
+.form-group{
+margin:auto;
+text-align: center;
+}
+.RegisterBtn{
+margin:10px;
+
+	padding: 10px;
+	text-align: center;
+}

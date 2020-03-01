@@ -1,0 +1,45 @@
+
+{% extends 'index.html' %}
+
+  {% load static %}
+
+{% block content %}
+
+  <div class="wrapper">
+    <div class="product-imgp">
+      <img src='/media/{{product.image}}' class="card-img-topp" alt="...">
+    </div>
+    <div class="product-infop">
+      <div class="product-textp">
+        <h1>{{product.product_name}}</h1>
+
+        <p>{{product.desc}} </p>
+      </div>
+      <div class="product-price-btnp">
+        <p><strong>Price </strong><span>{{product.price}}</span>$</p>
+          <a href="/products/{{i.id}}"><button type="button">buy now</button></a>
+      </div>
+    </div>
+
+ </div>
+
+<div class="related">
+
+{% for i in related %}
+
+  <div class="card card-1">
+    <div class="card-title" id="namepr{{i.id}}">{{i.product_name}}</div>
+    <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+    <div class="card-data">
+      <div class="card-title1" >Price: <span id="pricepr{{i.id}}">{{i.price}}</span></div>
+      <a href="/products/{{i.id}}"><button id="qv{{i.id}}" class="btn">QuickView</button></a>
+    </div>
+  </div>
+{% endfor %}
+
+</div>
+
+
+
+{% endblock %}
+

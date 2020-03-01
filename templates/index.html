@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--<style>-->
+<!--ul {-->
+<!--  list-style-type: none;-->
+<!--  margin: 0;-->
+<!--  padding: 0;-->
+<!--  overflow: hidden;-->
+<!--  border: 1px solid #e7e7e7;-->
+<!--  background-color:#000d1a;-->
+<!--}-->
+
+<!--li {-->
+<!--  float: left;-->
+<!--}-->
+
+<!--li a {-->
+<!--  display: block;-->
+<!--  color: white;-->
+<!--  text-align: center;-->
+<!--  padding: 14px 16px;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--li a:hover:not(.active) {-->
+<!--  background-color: #ddd;-->
+<!--}-->
+
+<!--li a.active {-->
+<!--  color: white;-->
+<!--  background-color: #990000;-->
+<!--}-->
+<!--</style>-->
+  {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'register.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'product_view.css' %}">
+  <link href="{% static 'Card.css' %}" rel="stylesheet">
+  <link  rel="stylesheet" type="text/css"  href="{% static 'footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+<ul class="nav">
+  <li><a class="active" href="{% url 'shop:index' %}">Home</a></li>
+  <li><a href="{% url 'shop:women' %}">Women</a></li>
+  <li><a href="{% url 'shop:men' %}">Men</a></li>
+  <li><a href="#shoes">Shoes</a></li>
+  <li><a href="#blog">Blog</a></li>
+  {% if user.is_authenticated %}
+  <li class="login1"><a href="{% url 'shop:logout' %}">Logout</a></li>
+  {% else %}
+
+  <li class="login1"><a href="{% url 'shop:login' %}">Login</a></li>
+  <li class="login1"><a href="{% url 'shop:register' %}">SignUp</a></li>
+  {% endif %}
+</ul>
+
+{% block content %}
+{% endblock %}
+<footer class="footers">
+            <div>contacts us</div>
+            <div class="icon"><i class="fa fa-facebook-square"></i>
+                <i class="fa fa-google-plus-official"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+  {% load static %}
+<link href="{% static 'Card.css' %}" rel="stylesheet">
+
+{% block content %}
+
+{% for product, range, nSlides in allProds %}
+<h1> {{product.0.category}} </h1>
+{% for i in product %}
+
+  <div class="card card-1">
+    <div class="card-title" id="namepr{{i.id}}">{{i.product_name}}</div>
+    <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+    <div class="card-data">
+      <div class="card-title1" >Price: <span id="pricepr{{i.id}}">{{i.price}}</span></div>
+      <a href="/products/{{i.id}}"><button id="qv{{i.id}}" class="btn">QuickView</button></a>
+    </div>
+  </div>
+{% endfor %}
+
+{% endfor %}
+
+{% endblock %}
